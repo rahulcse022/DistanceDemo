@@ -1,0 +1,14 @@
+/* Trade Gothic */
+@font-face {
+    font-family: '8bitfont';
+    src: url('../fonts/8-bit-fortress.woff') format('woff')
+}
+@font-face {
+    font-family: 'goshabold';
+    src: url('../fonts/GoshaSansBold.otf') 
+}
+@font-face {
+    font-family: 'goshareg';
+    src: url('../fonts/GoshaSansRegular.otf')
+}
+

@@ -27,16 +27,14 @@ function Header() {
         <div>
           {" "}
           {!active ? (
-            <img
-              src="assets/images/new/connect-wallet-active.png"
-              className="max-w-[300px] w-full"
-              alt="btn-connect"
-              onClick={handleModel}
-              style={{ cursor: "pointer" }}
-            />
+            <p
+              className="cursor-pointer  p-4 bitfont inline-block px-[20px] py-[10px] items-center justify-center mx-2 bg-[#f6c929] text-xl rounded-lg py-1 px-2 border-2 text-black text-center  mx-2 md:m-2 "
+              onClick={handleModel}>
+              Connect Wallet
+            </p>
           ) : (
             <button onClick={(e) => logout()}>
-              <p className="cursor-pointer  bitfont inline-block px-[20px] py-[10px] items-center justify-center mx-2 bg-[#f6c929] rounded-lg py-1 px-2 border-2 text-black text-center  mx-2 md:m-2 ">
+              <p className="cursor-pointer  bitfont text-xl inline-block px-[20px] py-[10px] items-center justify-center mx-2 bg-[#f6c929] rounded-lg py-1 px-2 border-2 text-black text-center  mx-2 md:m-2 ">
                 {account.slice(0, 4) + "...." + account.slice(38, 42)}
               </p>
             </button>

@@ -106,17 +106,17 @@ const Header = () => {
                       <div className="hidden absolute peer-hover:flex hover:flex flex-col bg-[#b231c4] drop-shadow-lg">
                         <Link
                           to="/how-trust"
-                          className="px-2 py-2 text-white hover:bg-gray-200">
+                          className="px-2 py-2 text-black hover:bg-gray-200">
                           How to set up TrustWallet
                         </Link>
                         <Link
                           to="/how-metamask"
-                          className="px-2 py-2 text-white hover:bg-gray-200">
+                          className="px-2 py-2 text-black hover:bg-gray-200">
                           How to set up Metamask
                         </Link>
                         <Link
                           to="/how-eth"
-                          className="px-2 py-2 text-white hover:bg-gray-200">
+                          className="px-2 py-2 text-black hover:bg-gray-200">
                           How to buy with ETH
                         </Link>
                       </div>
@@ -176,52 +176,52 @@ const Header = () => {
                       className="relative  md:w-full w-auto mx-auto"
                       src={process.env.PUBLIC_URL + "./assets/header_btn.png"}
                     />
-                    <i className="absolute flex top-[0] text-white  text-2xl h-full w-full justify-center items-center z-[100] peer px-2 py-2  text-white hover:text-blue-600">
+                    <i className="absolute flex top-[0] text-black  text-2xl h-full w-full justify-center items-center z-[100] peer px-2 py-2  text-white hover:text-blue-600">
                       <FaGlobe />
                     </i>
                     <div className="hidden absolute peer-hover:flex hover:flex flex-col bg-yellow-600 drop-shadow-lg">
                       <a
-                        className="px-2 py-2 text-white hover:bg-gray-200"
+                        className="px-2 py-2 text-black hover:bg-gray-200"
                         href="#">
                         RUSSIAN
                       </a>
 
                       <a
-                        className="px-2 py-2 text-white hover:bg-gray-200"
+                        className="px-2 py-2 text-black hover:bg-gray-200"
                         href="#">
                         TURKISH
                       </a>
 
                       <a
-                        className="px-2 py-2 text-white hover:bg-gray-200"
+                        className="px-2 py-2 text-black hover:bg-gray-200"
                         href="#">
                         CHINESE (Traditional)
                       </a>
 
                       <a
-                        className="px-2 py-2 text-white hover:bg-gray-200"
+                        className="px-2 py-2 text-black hover:bg-gray-200"
                         href="#">
                         CHINESE (Simplified)
                       </a>
 
                       <a
-                        className="px-2 py-2 text-white hover:bg-gray-200"
+                        className="px-2 py-2 text-black hover:bg-gray-200"
                         href="#">
                         KOREAN
                       </a>
 
                       <a
-                        className="px-2 py-2 text-white hover:bg-gray-200"
+                        className="px-2 py-2 text-black hover:bg-gray-200"
                         href="#">
                         ARABIC
                       </a>
                       <a
-                        className="px-2 py-2 text-white hover:bg-gray-200"
+                        className="px-2 py-2 text-black hover:bg-gray-200"
                         href="#">
                         JAPANESE
                       </a>
                       <a
-                        className="px-2 py-2 text-white hover:bg-gray-200"
+                        className="px-2 py-2 text-black hover:bg-gray-200"
                         href="#">
                         POLISH
                       </a>
@@ -234,53 +234,53 @@ const Header = () => {
                       className="relative w-full  md:w-full w-auto mx-auto"
                       src={process.env.PUBLIC_URL + "./assets/header_btn.png"}
                     />
-                    <i className="absolute flex top-[0] text-white  text-2xl h-full w-full justify-center items-center z-[100] peer px-2 py-2  text-white hover:text-blue-600">
+                    <i className="absolute flex top-[0] text-black  text-2xl h-full w-full justify-center items-center z-[100] peer px-2 py-2  text-white hover:text-blue-600">
                       <FiShare2 />
                     </i>
                     <div className="hidden absolute peer-hover:flex hover:flex flex-col bg-yellow-600 drop-shadow-lg">
                       <a
-                        className="px-2 py-2 text-white hover:bg-gray-200"
+                        className="px-2 py-2 text-black hover:bg-gray-200"
                         href="https://twitter.com/Metacade_">
                         Coming Later today
                       </a>
 
                       <a
-                        className="px-2 py-2 text-white hover:bg-gray-200"
+                        className="px-2 py-2 text-black hover:bg-gray-200"
                         href="https://twitter.com/Metacade_Crypto">
                         Twitter
                       </a>
                       <a
-                        className="px-2 py-2 text-white hover:bg-gray-200"
+                        className="px-2 py-2 text-black hover:bg-gray-200"
                         href="https://www.facebook.com/metacade">
                         Facebook
                       </a>
                       <a
-                        className="px-2 py-2 text-white hover:bg-gray-200"
+                        className="px-2 py-2 text-black hover:bg-gray-200"
                         href="https://t.me/+rfvHWK2AfNMzMjQ0">
                         Telegram
                       </a>
                       <a
-                        className="px-2 py-2 text-white hover:bg-gray-200"
+                        className="px-2 py-2 text-black hover:bg-gray-200"
                         href="https://www.youtube.com/channel/UCVA_TZHxuqziubGe1ExEUQg">
                         YouTube
                       </a>
                       <a
-                        className="px-2 py-2 text-white hover:bg-gray-200"
+                        className="px-2 py-2 text-black hover:bg-gray-200"
                         href="https://discord.com/channels/@metacade">
                         Discord
                       </a>
                       <a
-                        className="px-2 py-2 text-white hover:bg-gray-200"
+                        className="px-2 py-2 text-black hover:bg-gray-200"
                         href="https://www.instagram.com/metacade_/">
                         Instagram
                       </a>
                       <a
-                        className="px-2 py-2 text-white hover:bg-gray-200"
+                        className="px-2 py-2 text-black hover:bg-gray-200"
                         href="https://www.tiktok.com/@metacade_official">
                         Tiktok
                       </a>
                       <a
-                        className="px-2 py-2 text-white hover:bg-gray-200"
+                        className="px-2 py-2 text-black hover:bg-gray-200"
                         href="
                 https://www.linkedin.com/company/metacade/">
                         Linkedin

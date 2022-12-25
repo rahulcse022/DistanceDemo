@@ -209,16 +209,16 @@ const BuyETH = ({
             </div>
           </div>
 
-          <div className="inline-block px-[20px] py-[10px] items-center mx-2 justify-center bg-[#ff3196] rounded-lg py-1 px-2 border-2 text-white text-center  m-2 md:m-2 ">
+          <div className="inline-block px-[20px] py-[10px] items-center mx-2 justify-center bg-[#ff3196] rounded-lg py-1 px-2 border-2 text-black text-center  m-2 md:m-2 ">
             <p className="text-xl text-left md:m-0 m-3 py-2 text-white">
               Terms & Conditions
             </p>
-            <ul className="text-white text-left">
-              <li className="text-[black]">* Wallet must be connected</li>
-              <li className="text-[black]">
+            <ul className="text-black text-left">
+              <li className="text-white">* Wallet must be connected</li>
+              <li className="text-white">
                 * Location permission must be allowed
               </li>
-              <li className="text-[black]">* Distance must be 10M</li>
+              <li className="text-white">* Distance must be 10M</li>
             </ul>
           </div>
         </div>

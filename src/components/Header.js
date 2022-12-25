@@ -13,7 +13,7 @@ function Header() {
   };
 
   return (
-    <div className="bg-black fixed w-full">
+    <div className="bg-[#00004c] fixed w-full">
       {model ? <WalletModel model={model} /> : null}
       <div className="h-[80px] max-w-[1350px] mx-auto flex justify-between items-center px-5">
         <div>
@@ -28,13 +28,13 @@ function Header() {
           {" "}
           {!active ? (
             <p
-              className="cursor-pointer  p-4 bitfont inline-block px-[20px] py-[10px] items-center justify-center mx-2 bg-[#f6c929] text-xl rounded-lg py-1 px-2 border-2 text-black text-center  mx-2 md:m-2 "
+              className="cursor-pointer  p-4 bitfont inline-block px-[20px] py-[10px] items-center justify-center mx-2 bg-[#ff3196] text-xl rounded-lg py-1 px-2 border-2 text-white text-center  mx-2 md:m-2 "
               onClick={handleModel}>
               Connect Wallet
             </p>
           ) : (
             <button onClick={(e) => logout()}>
-              <p className="cursor-pointer  bitfont text-xl inline-block px-[20px] py-[10px] items-center justify-center mx-2 bg-[#f6c929] rounded-lg py-1 px-2 border-2 text-black text-center  mx-2 md:m-2 ">
+              <p className="cursor-pointer  bitfont text-xl inline-block px-[20px] py-[10px] items-center justify-center mx-2 bg-[#ff3196] rounded-lg py-1 px-2 border-2 text-white text-center  mx-2 md:m-2 ">
                 {account.slice(0, 4) + "...." + account.slice(38, 42)}
               </p>
             </button>

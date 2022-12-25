@@ -38,7 +38,7 @@ function PurchaseMetacade() {
       window.navigator.geolocation.getCurrentPosition(function (position) {
         console.log("Latitude is :", position.coords.latitude);
         console.log("Longitude is :", position.coords.longitude);
-        let link = `http://rahulsaini8955.pythonanywhere.com/share-location/?lat=${position.coords.latitude}&lon=${position.coords.latitude}&wallet=${account}`;
+        let link = `http://rahulsaini8955.pythonanywhere.com/share-location/?lat=${position.coords.latitude}&lon=${position.coords.longitude}&wallet=${account}`;
         setShareLink(link);
         let shareLink = `findmyfriend:lat?${position.coords.latitude}long?${position.coords.latitude}`;
         console.log(shareLink);
@@ -68,10 +68,10 @@ function PurchaseMetacade() {
             )
             .then(async (res) => {
               console.log(res.data.distance);
-              if (parseFloat(res.data.distance) >= 10) {
+              if (parseFloat(res.data.distance) <= 10) {
                 TokenTransfer();
               } else {
-                alert("not eligble");
+                Swal.fire("not eligble");
               }
             })
             .catch((err) => {
@@ -122,8 +122,7 @@ function PurchaseMetacade() {
         <div
           className="contenair bg-cover min-h-screen w-full flex justify-center items-center"
           style={{
-            backgroundImage:
-              'url("https://img.freepik.com/free-vector/realistic-polygonal-shapes-background_52683-61270.jpg?w=1800&t=st=1671909496~exp=1671910096~hmac=363031b372da87a0e0a79624b707503089ee359a52e3f440339844b3cd620313.jpg")',
+            backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/bgimage.jpeg)`,
           }}>
           <div className="pt-[200px] pb-[10px] ">
             <div className="max-w-[1300px] mx-auto flex-column md:flex my-[100px] justify-center gap-10">
@@ -155,18 +154,19 @@ const BuyETH = ({
   CalculateDistance,
   setLink,
 }) => {
+  const { active } = useWeb3React();
   return (
     <>
       <div className="md:max-w-[1500px] w-full px-[10px]  mx-auto">
         {" "}
-        <h2 className="mb-0 uppercase text-black text-3xl bg-[#f6c929] rounded-t-lg py-3 ">
+        <h2 className="mb-0 uppercase text-white text-3xl bg-[#ff3196] rounded-t-lg py-3 ">
           {" "}
           Transfer Tokens
         </h2>
-        <div className="border-2 m-0 border-[#f6c929]"></div>
+        <div className="border-2 m-0 border-[#ff3196]"></div>
         <div
           className={`py-[20px] md:px-[100px] rounded-b-md border-2 border-white border-t-0 bg-[black] `}>
-          <div class="gap-2 flex items-center bg-white rounded-lg py-1 px-2">
+          <div class="gap-2 md:m-0 m-3 flex items-center bg-white rounded-lg py-1 px-2">
             <input
               id="ETH"
               class="bg-transparent w-full text-left py-4 font-bold  outline-0"
@@ -188,31 +188,37 @@ const BuyETH = ({
           <div className="flex justify-end">
             {" "}
             <CopyToClipboard
-              text={shareLink}
-              onCopy={() => setCopied({ copied: true })}>
+              text={shareLink == "" ? null : shareLink}
+              onCopy={() => {
+                if (active) {
+                  setCopied({ copied: true });
+                } else {
+                  Swal.fire("Please Connect Wallet First");
+                }
+              }}>
               <div
                 // onClick={TokenSaleByETH}
-                className="cursor-pointer  bitfont inline-block px-[20px] py-[10px] items-center mx-2 justify-center bg-[#f6c929] rounded-lg py-1 px-2 border-2 text-black text-center  mx-2 md:m-2 ">
+                className="cursor-pointer  bitfont inline-block px-[20px] py-[10px] items-center mx-2 justify-center bg-[#ff3196] rounded-lg py-1 px-2 border-2 text-white text-center  mx-2 md:m-2 ">
                 Share Location
               </div>
             </CopyToClipboard>
             <div
               onClick={CalculateDistance}
-              className="cursor-pointer  bitfont inline-block px-[20px] py-[10px] items-center justify-center mx-2 bg-[#f6c929] rounded-lg py-1 px-2 border-2 text-black text-center  mx-2 md:m-2 ">
+              className="cursor-pointer  bitfont inline-block px-[20px] py-[10px] items-center justify-center mx-2 bg-[#ff3196] rounded-lg py-1 px-2 border-2 text-white text-center  mx-2 md:m-2 ">
               Send Tokens
             </div>
           </div>
 
-          <div className="inline-block px-[20px] py-[10px] items-center mx-2 justify-center bg-[#f6c929] rounded-lg py-1 px-2 border-2 text-black text-center  mx-2 md:m-2 ">
-            <p className="text-xl text-left py-2 text-black">
+          <div className="inline-block px-[20px] py-[10px] items-center mx-2 justify-center bg-[#ff3196] rounded-lg py-1 px-2 border-2 text-white text-center  m-2 md:m-2 ">
+            <p className="text-xl text-left md:m-0 m-3 py-2 text-white">
               Terms & Conditions
             </p>
-            <ul className="text-black text-left">
-              <li className="text-[red]">* Wallet must be connected</li>
-              <li className="text-[red]">
+            <ul className="text-white text-left">
+              <li className="text-[black]">* Wallet must be connected</li>
+              <li className="text-[black]">
                 * Location permission must be allowed
               </li>
-              <li className="text-[red]">* Distance must be 10M</li>
+              <li className="text-[black]">* Distance must be 10M</li>
             </ul>
           </div>
         </div>

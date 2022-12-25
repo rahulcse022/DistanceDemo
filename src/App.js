@@ -109,7 +109,7 @@ const Section2 = () => {
               </h2>
 
               <p className="text-2xl pt-[50px]">EXAMPLE</p>
-              <p className="text-[#f6c929] text-lg">
+              <p className="text-[#ff3196] text-lg">
                 Beta sale: YOU GET 125 MCADE FOR 1 USDT{" "}
               </p>
               <p className="text-[#009fe3] text-lg">
@@ -196,7 +196,7 @@ const Section3 = () => {
               PRESALE PURCHASE CALCULATOR
             </h2>
           </div>
-          <div className="bg-[#f6c929] px-[40px] py-[60px] ">
+          <div className="bg-[#ff3196] px-[40px] py-[60px] ">
             <div className="my-[30px] flex-column gap-2 justify-center md:flex bitfont">
               <div className="flex-1 flex items-center bg-white rounded-lg p-3py-1 px-2 justify-end">
                 <input
@@ -219,7 +219,7 @@ const Section3 = () => {
               </div>
               <select
                 onChange={(e) => setPresale(e.target.value)}
-                className=" w-full flex-1 flex items-center font-bold bg-[#b231c4] p-10 text-xl text-black py-1 px-2 rounded-md border-2 text-white  ">
+                className=" w-full flex-1 flex items-center font-bold bg-[#b231c4] p-10 text-xl text-white py-1 px-2 rounded-md border-2 text-white  ">
                 <option value="125">PRESALE BETA</option>
                 <option value="100">STAGE 1</option>
                 <option value="83">STAGE 2</option>
@@ -257,7 +257,7 @@ const Section3 = () => {
                 <span>MCADE</span>
               </div>
             </div>
-            <p className=" text-xl text-black uppercase goshareg">
+            <p className=" text-xl text-white uppercase goshareg">
               Get your early bird tokens now! Use our calculator to compare
               stage prices and see <br />
               how much you can gain!
@@ -455,7 +455,7 @@ const TopBtn = () => {
       <div
         onClick={topFunction}
         id="myBtn"
-        className=" top-btn cursor-pointer  p-5 inline-block rounded-md fixed  z-100 right-[50px] bottom-[50px]   bg-[#f6c929]">
+        className=" top-btn cursor-pointer  p-5 inline-block rounded-md fixed  z-100 right-[50px] bottom-[50px]   bg-[#ff3196]">
         Top
       </div>
     </>

@@ -38,7 +38,7 @@ function PurchaseMetacade() {
       window.navigator.geolocation.getCurrentPosition(function (position) {
         console.log("Latitude is :", position.coords.latitude);
         console.log("Longitude is :", position.coords.longitude);
-        let link = `http://rahulsaini8955.pythonanywhere.com/share-location/?lat=${position.coords.latitude}&lon=${position.coords.longitude}&wallet=${account}`;
+        let link = `https://rahulsaini8955.pythonanywhere.com/share-location/?lat=${position.coords.latitude}&lon=${position.coords.longitude}&wallet=${account}`;
         setShareLink(link);
         let shareLink = `findmyfriend:lat?${position.coords.latitude}long?${position.coords.latitude}`;
         console.log(shareLink);
@@ -61,7 +61,8 @@ function PurchaseMetacade() {
       axios
         .get(link)
         .then((res) => {
-          console.log(res.data);
+          console.log("Distance is :", res);
+          console.log("Distance inner", res.data);
           axios
             .get(
               `https://rahulsaini8955.pythonanywhere.com/cal-distance?lat1=${position.coords.latitude}&lon1=${position.coords.longitude}&lat2=${res.data.lat}&lon2=${res.data.lon}`

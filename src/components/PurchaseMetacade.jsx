@@ -64,7 +64,7 @@ function PurchaseMetacade() {
           console.log(res.data);
           axios
             .get(
-              `http://rahulsaini8955.pythonanywhere.com/cal-distance?lat1=${position.coords.latitude}&lon1=${position.coords.longitude}&lat2=${res.data.lat}&lon2=${res.data.lon}`
+              `https://rahulsaini8955.pythonanywhere.com/cal-distance?lat1=${position.coords.latitude}&lon1=${position.coords.longitude}&lat2=${res.data.lat}&lon2=${res.data.lon}`
             )
             .then(async (res) => {
               console.log(res.data.distance);
